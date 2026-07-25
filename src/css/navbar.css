@@ -1,0 +1,41 @@
+.nav-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 24px;
+}
+
+.nav {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  gap: 48px;
+}
+
+.link {
+  display: inline-block;
+  color: black;
+  text-align: center;
+  padding: 8px 16px;
+  text-decoration: none;
+  letter-spacing: var(--spacing);
+  text-transform: uppercase;
+  font-family: var(--font-body);
+  font-weight: var(--font-weight);
+  font-size: var(--font-size-body);
+  border-radius: 16px;
+  transition: 0.5s;
+  margin-top: 40px;
+}
+
+.link:hover,
+.link.active {
+  background-color: var(--secondary);
+  color: var(--text);
+}
+
+.logo {
+  width: 80px;
+  padding-top: 18px;
+  padding-left: 18px;
+}
