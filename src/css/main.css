@@ -1,0 +1,16 @@
+/* reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+:root {
+  background-color: #1b1b1b;
+  color: #ffffff;
+
+  /* farve variabler */
+  --gold: #f5dc0f;
+  --red: #e63946;
+}

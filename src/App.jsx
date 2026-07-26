@@ -1,7 +1,7 @@
 import HomePage from "./pages/HomePage";
 import PointPage from "./pages/PointPage";
 import NavBar from "./components/NavBar";
-import { HashRouter, Routes, Route } from "react-router";
+import { HashRouter, Routes, Route } from "react-router-dom";
 
 export default function App() {
   return (
