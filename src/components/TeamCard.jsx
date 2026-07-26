@@ -1,10 +1,15 @@
 import Bowl from "./Bowl";
 import "../css/teamcard.css";
 
-export default function TeamCard({ team, addPoint, removePoint }) {
+export default function TeamCard({ team, addPoint, removePoint, changeName }) {
   return (
     <div className="team-card">
-      <h2>{team.name}</h2>
+      <input
+        className="team-name"
+        type="text"
+        value={team.name}
+        onChange={(e) => changeName(team.id, e.target.value)} //mulighed for at ændre holdnavn
+      />
       <Bowl score={team.score} />
       <p>{team.score} chips</p>
       <div className="buttons">
