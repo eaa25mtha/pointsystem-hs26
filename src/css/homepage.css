@@ -30,5 +30,5 @@ button {
 .start-stop-knapperne {
   display: flex;
   flex-direction: row;
-  gap: 24px;
+  gap: 20px;
 }
