@@ -11,7 +11,7 @@
 .timer {
   font-size: 15rem;
   font-weight: bold;
-  color: var(--red);
+  color: var(--green);
   font-family: var(--font-family);
 }
 

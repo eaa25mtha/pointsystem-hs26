@@ -54,6 +54,9 @@ export default function PointPage() {
     setTeams(defaultTeams);
   }
 
+  //det hold der fører fremhæves
+  const highestScore = Math.max(...teams.map((team) => team.score));
+
   return (
     <>
       <div className="point-page">
@@ -64,6 +67,9 @@ export default function PointPage() {
             addPoint={addPoint}
             removePoint={removePoint}
             changeName={changeName}
+            isLeading={
+              team.score === highestScore && highestScore > 0
+            } /* der vises ikke en vinder når alle har 0 point */
           />
         ))}
       </div>

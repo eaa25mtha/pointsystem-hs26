@@ -22,6 +22,22 @@
   border-radius: 8px;
 }
 
+.leader {
+  color: gold;
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.leader-card {
+  border: 3px solid gold;
+  box-shadow:
+    0 0 15px gold,
+    0 0 30px rgba(255, 215, 0, 0.5); /* den der fører har en lille effekt på */
+  transform: scale(1.03);
+  transition: 0.3s ease;
+}
+
 /* ---------- Bowl ---------- */
 
 .bowl {
@@ -48,8 +64,8 @@
   background: radial-gradient(
     circle,
     white 20%,
-    crimson 25%,
-    crimson 70%,
+    var(--green) 25%,
+    var(--green) 70%,
     white 72%
   );
 }
