@@ -13,4 +13,11 @@
   /* farve variabler */
   --gold: #f5dc0f;
   --red: #e63946;
+  --green: #306834;
+
+  /* font */
+  --font-family: "League Spartan", sans-serif;
+  --font-weight: 800;
+  --letter-spacing: 4px;
+  --text-transform: uppercase;
 }
