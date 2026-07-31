@@ -11,7 +11,7 @@
 .timer {
   font-size: 15rem;
   font-weight: bold;
-  color: var(--green);
+  color: white;
   font-family: var(--font-family);
 }
 
@@ -24,7 +24,9 @@ button {
   font-family: var(--font-family);
   font-weight: var(--font-weight);
   letter-spacing: var(--letter-spacing);
-  text-transform: var(--text-transform);
+  background-color: var(--gold);
+  color: var(--text);
+  text-transform: uppercase;
 }
 
 .start-stop-knapperne {

@@ -19,33 +19,24 @@ export default function PointPage() {
     localStorage.setItem("teams", JSON.stringify(teams));
   }, [teams]);
 
-  //tilføj point
-  function addPoint(id) {
+  // ændrer holdnavne
+  function changeName(id, newName) {
     setTeams((prev) =>
-      prev.map((team) =>
-        team.id === id ? { ...team, score: team.score + 1 } : team,
-      ),
+      prev.map((team) => (team.id === id ? { ...team, name: newName } : team)),
     );
   }
 
-  //fjern point
-  function removePoint(id) {
+  //ændrer scoren
+  function changeScore(id, pointsToAdd) {
     setTeams((prev) =>
       prev.map((team) =>
         team.id === id
           ? {
               ...team,
-              score: Math.max(0, team.score - 1),
+              score: Math.max(0, team.score + pointsToAdd),
             }
           : team,
       ),
-    );
-  }
-
-  // ændrer holdnavne
-  function changeName(id, newName) {
-    setTeams((prev) =>
-      prev.map((team) => (team.id === id ? { ...team, name: newName } : team)),
     );
   }
 
@@ -64,9 +55,8 @@ export default function PointPage() {
           <TeamCard
             key={team.id}
             team={team}
-            addPoint={addPoint}
-            removePoint={removePoint}
             changeName={changeName}
+            changeScore={changeScore}
             isLeading={
               team.score === highestScore && highestScore > 0
             } /* der vises ikke en vinder når alle har 0 point */

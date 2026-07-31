@@ -3,7 +3,7 @@ import "../css/homepage.css";
 import bell from "../assets/sounds/bell.mp3";
 
 export default function HomePage() {
-  const START_TIME = 300; //5 min
+  const START_TIME = 480; //8 min
 
   const [time, setTime] = useState(START_TIME);
   const [running, setRunning] = useState(false);

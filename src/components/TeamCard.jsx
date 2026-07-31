@@ -1,13 +1,9 @@
+import { useState } from "react";
 import Bowl from "./Bowl";
 import "../css/teamcard.css";
 
-export default function TeamCard({
-  team,
-  addPoint,
-  removePoint,
-  changeName,
-  isLeading,
-}) {
+export default function TeamCard({ team, changeName, changeScore, isLeading }) {
+  const [pointsToAdd, setPointsToAdd] = useState("");
   return (
     <div className={`team-card ${isLeading ? "leader-card" : ""}`}>
       {isLeading && <div className="leader">👑</div>}
@@ -19,9 +15,26 @@ export default function TeamCard({
       />
       <Bowl score={team.score} />
       <p>{team.score} point</p>
-      <div className="buttons">
-        <button onClick={() => removePoint(team.id)}>-</button>
-        <button onClick={() => addPoint(team.id)}>+</button>
+
+      <div className="score-input">
+        <input
+          className="score-box"
+          type="text"
+          inputMode="numeric"
+          placeholder=""
+          value={pointsToAdd}
+          onChange={(e) => setPointsToAdd(e.target.value)}
+          onKeyDown={(e) => {
+            if (e.key === "Enter") {
+              const value = Number(pointsToAdd);
+
+              if (!isNaN(value) && value !== 0) {
+                changeScore(team.id, value);
+                setPointsToAdd("");
+              }
+            }
+          }}
+        />
       </div>
     </div>
   );
