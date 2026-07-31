@@ -14,7 +14,7 @@ export default function TeamCard({ team, changeName, changeScore, isLeading }) {
         onChange={(e) => changeName(team.id, e.target.value)} //mulighed for at ændre holdnavn
       />
       <Bowl score={team.score} />
-      <p>{team.score} point</p>
+      <p className="point-font">{team.score} point</p>
 
       <div className="score-input">
         <input

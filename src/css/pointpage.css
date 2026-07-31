@@ -1,14 +1,14 @@
 .point-page {
-  height: 100vh;
+  height: 80vh;
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(3, 1fr);
-  gap: 12px;
-  padding: 20px;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 2px;
   box-sizing: border-box;
-  margin-left: 6.5rem;
+  margin-left: 2rem;
   margin-bottom: 2rem;
+  margin-top: 4rem;
 }
 
 .nulstil-btn-container {
