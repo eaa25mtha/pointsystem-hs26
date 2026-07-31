@@ -34,3 +34,49 @@ button {
   flex-direction: row;
   gap: 20px;
 }
+
+/* matrix overlay */
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.75);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: fadeIn 0.4s ease;
+}
+
+.overlay-content {
+  background: #0d5a2f;
+  padding: 40px;
+  border: 4px solid gold;
+  border-radius: 20px;
+  box-shadow: 0 0 40px gold;
+  animation: popIn 0.4s ease;
+}
+
+.matrix-img {
+  width: 95%;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes popIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
